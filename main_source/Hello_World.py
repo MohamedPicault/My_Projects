@@ -1,5 +1,6 @@
 def message():
-    return 'Hello!'
+    msg = str('Hello!')
+    return msg
 
 
 if __name__ == '__main__':
