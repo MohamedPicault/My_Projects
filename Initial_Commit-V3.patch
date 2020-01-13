@@ -1,0 +1,36 @@
+Index: main_source/Hello_World.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- main_source/Hello_World.py	(revision 3b19d852089f3a04082c754c5e5ccf3ecdf083b2)
++++ main_source/Hello_World.py	(date 1578929494867)
+@@ -1,5 +1,7 @@
+ def message():
+-    return 'Hello!'
++    msg = str('Hello!')
++    return msg
++
+ 
+ 
+ if __name__ == '__main__':
+Index: test/test_hellow_world.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test/test_hellow_world.py	(revision 3b19d852089f3a04082c754c5e5ccf3ecdf083b2)
++++ test/test_hellow_world.py	(date 1578928795593)
+@@ -1,9 +1,10 @@
+ import unittest
+-from main_source import Hello_World as hello
++from main_source import Hello_World
++
+ 
+ class MyTestCase(unittest.TestCase):
+     def test_message(self):
+-        self.assertEqual('Hello' , hello.message())
++        self.assertEqual('Hello!', Hello_World.message())
+ 
+ 
+ if __name__ == '__main__':
